@@ -46,7 +46,7 @@ class UserProfile(AbstractBaseUser, PermissionsMixin):
 
     objects = UserProfileManager()
 
-    #유저 모델에서 필드의 이름을 설명하는 string, 유니크 식별자
+    #유저 모델에서 필드의 이름을 설명하는 string, 유니크 식별자, 여기에 해준 설정떄문에 로그인할 때 id가 email로 됨
     USERNAME_FIELD = 'email'
     #createsuperuser 커멘드로 유저를 생성할 때 나타날 필드 이름 목록
     REQUIRED_FIELDS = ['name']
